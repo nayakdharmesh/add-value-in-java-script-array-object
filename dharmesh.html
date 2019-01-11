@@ -1,0 +1,42 @@
+<html>
+    <body>
+        
+        <center>
+
+            <h2>Add data in form</h2>
+            Name:-&nbsp;&nbsp;&nbsp;<input type="text" id="name" placeholder="enter your name" required><br><br>
+            Age:-&nbsp;&nbsp;&nbsp;<input type="number" id="age" placeholder="enter your age" maxlength="100" minlength="1"  required><br><br>
+            gender:-&nbsp;&nbsp;&nbsp;male:-</b><input type="radio" value="male" name="gender" id="gender0">&nbsp;&nbsp;&nbsp;Female:-</b><input type="radio" value="female" name="gender" id="gender1"><br><br>
+            Mobile No:-&nbsp;&nbsp;&nbsp;<input type="number" id="no" maxlength="9" required placeholder="enter the mobile no "><br><br>
+            Email address:-&nbsp;&nbsp;&nbsp;<input type="text" id="address" placeholder="enter your address"><br><br>
+            <input type="button" value="ok"  onclick="add()">&nbsp;&nbsp;&nbsp;<input type="button" value="reset" >
+            
+        </center>   
+    </body>
+
+    <script>
+        
+            function check()
+            {
+                
+                if(isNaN(mno) )
+                {
+                        alert("enter the  valid mobile no");
+                }
+
+            }
+            
+            var arr=[{"name":'',"age":'',"Mobile":'',"address":'',"gender":''}];
+            function add()
+            {
+            arr.name=document.getElementById("name").value;;
+            arr.age=document.getElementById("age").value;;
+            arr.Mobile=document.getElementById("no").value;;
+            arr.address=document.getElementById("address").value;
+            arr.gender=document.querySelector('input[name = "gender"]:checked').value;;
+            console.log(arr);
+            }
+          
+             
+    </script>
+</html>
